@@ -1,4 +1,4 @@
-package adv.HomeWork15_09_2021.Task_2;
+package adv.JavaFundamentals.HomeWork15_09_2021.Task_2;
 
 public class Client {
     private String name;

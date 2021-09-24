@@ -1,4 +1,4 @@
-package adv.HomeWork13_09_2021.Task_4;
+package adv.JavaFundamentals.HomeWork13_09_2021.Task_4;
 
 import java.util.Scanner;
 

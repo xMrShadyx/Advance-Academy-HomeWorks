@@ -1,4 +1,4 @@
-package adv.HomeWork20_09_2021.Task_4;
+package adv.JavaFundamentals.HomeWork20_09_2021.Task_4;
 
 import java.util.Locale;
 

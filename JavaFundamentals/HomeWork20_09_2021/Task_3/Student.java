@@ -1,4 +1,4 @@
-package adv.HomeWork20_09_2021.Task_3;
+package adv.JavaFundamentals.HomeWork20_09_2021.Task_3;
 
 public class Student {
     private String name;

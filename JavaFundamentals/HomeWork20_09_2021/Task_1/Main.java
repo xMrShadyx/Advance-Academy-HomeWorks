@@ -1,4 +1,4 @@
-package adv.HomeWork20_09_2021.Task_1;
+package adv.JavaFundamentals.HomeWork20_09_2021.Task_1;
 
 public class Main {
     public static void main(String[] args) {

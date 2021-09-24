@@ -1,4 +1,4 @@
-package adv.HomeWork13_09_2021.Task_1;
+package adv.JavaFundamentals.HomeWork13_09_2021.Task_1;
 
 import java.sql.SQLOutput;
 import java.util.Scanner;

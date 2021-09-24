@@ -1,4 +1,4 @@
-package adv.HomeWork15_09_2021.Task_1;
+package adv.JavaFundamentals.HomeWork15_09_2021.Task_1;
 
 public class Teacher extends User{
     private double salary;
