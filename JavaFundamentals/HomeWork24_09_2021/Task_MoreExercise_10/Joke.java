@@ -57,8 +57,6 @@ public class Joke {
     }
 
     public String JokeString() {
-        return "Joke{" +
-                "JokeText='" + JokeText + '\'' +
-                '}';
+        return this.JokeText;
     }
 }
