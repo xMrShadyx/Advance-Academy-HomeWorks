@@ -14,12 +14,10 @@ public class Database {
     }
 
     public ArrayList<Joke> returnDb() {
-        ArrayList<Joke> newArray = new ArrayList<>(jokeDatabase);
-        return newArray;
+        return new ArrayList<>(jokeDatabase);
     }
 
     public void removeJokeByID(int id) {
         jokeDatabase.remove(id);
-//        returnDb().remove(id);
     }
 }

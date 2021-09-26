@@ -25,28 +25,16 @@ public class Joke {
         return Username;
     }
 
-    public String getEmail() {
-        return Email;
-    }
-
-    public String getFirstName() {
-        return FirstName;
+    public String returnUsername() {
+        return this.Username;
     }
 
     public String getLastName() {
         return LastName;
     }
 
-    public String getPhoneNumber() {
-        return PhoneNumber;
-    }
-
     public int getJokeID() {
         return JokeID;
-    }
-
-    public String getJokeText() {
-        return JokeText;
     }
 
     @Override
