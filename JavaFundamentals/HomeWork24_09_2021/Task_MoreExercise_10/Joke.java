@@ -9,6 +9,7 @@ public class Joke {
     private String PhoneNumber;
     private int JokeID;
     private String JokeText;
+    RandomJoke randJoke = new RandomJoke();
 
 
     public Joke(String username, String email, String firstName, String lastName, String phoneNumber, int jokeID, String jokeText) {
@@ -19,6 +20,17 @@ public class Joke {
         PhoneNumber = phoneNumber;
         JokeID = jokeID;
         JokeText = jokeText;
+    }
+
+    public Joke(String username, String email, String firstName, String lastName, String phoneNumber, int jokeID) {
+        Username = username;
+        Email = email;
+        FirstName = firstName;
+        LastName = lastName;
+        PhoneNumber = phoneNumber;
+        JokeID = jokeID;
+        JokeText = randJoke.generateRandomJoke();
+
     }
 
     public String getUsername() {

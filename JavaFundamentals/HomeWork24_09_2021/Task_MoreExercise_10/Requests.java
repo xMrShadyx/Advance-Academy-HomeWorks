@@ -13,6 +13,12 @@ public class Requests {
         System.out.println("Successfully added new jokes.");
     }
 
+    public static void addJokes(String username, String email, String fName, String lName, String phoneNumber, int id) {
+        Joke newUser = new Joke(username, email, fName, lName, phoneNumber, id);
+        db.setJokeDatabase(newUser);
+        System.out.println("Successfully added new jokes.");
+    }
+
 
 
     public static void returnJokes(ArrayList<Joke> array) {
