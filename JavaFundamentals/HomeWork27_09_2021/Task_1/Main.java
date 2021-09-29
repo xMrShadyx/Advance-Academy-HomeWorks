@@ -18,30 +18,35 @@ public class Main {
 
         String currentItem = getItem();
         System.out.println(currentItem);
-        String strToguess = keyboard.nextLine();
+        System.out.print("Start guessing: ");
+        String strToGuess = keyboard.nextLine();
 
         while (true) {
-            if (getListSize() <= 0) {
+            if (gameOver()) {
                 System.out.println("Game is over, out of items");
                 return;
             }
 
-            if (strToguess.equals(currentItem)) {
+            if (strToGuess.equals(currentItem)) {
                 System.out.println("You guessed correct word was: " + currentItem);
                 removeItem(currentItem);
-                currentItem = getItem();
-                System.out.println(currentItem);
-
+                if (!gameOver()) {
+                    currentItem = getItem();
+                    System.out.println(currentItem);
+                    System.out.print("Start guessing: ");
+                } else {
+                    System.out.println("Game is over, out of items");
+                    return;
+                }
             } else {
                 System.out.print("Try Again: ");
-                strToguess = keyboard.nextLine();
             }
-
-
+            strToGuess = keyboard.nextLine();
         }
+    }
 
-
-
+    public static boolean gameOver() {
+        return getListSize() == 0;
     }
 
     public static void addItem(String str) {
