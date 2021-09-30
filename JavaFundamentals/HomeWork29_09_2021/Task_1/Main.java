@@ -12,7 +12,6 @@ public class Main extends JFrame implements ActionListener{
     public JButton subtractButton;
     public JButton multiplyButton;
     public JButton divideButton;
-    public JLabel resultLabel;
 
     public JTextField firstNumberField;
     public JTextField secondNumberField;
@@ -20,9 +19,10 @@ public class Main extends JFrame implements ActionListener{
     public Main() {
         super("Calculator");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(300,300);
+        setSize(300,120);
         setResizable(false);
         setLayout(null);
+        setLocationRelativeTo(null);
 
 
         addButton = new JButton("Add");
@@ -31,78 +31,104 @@ public class Main extends JFrame implements ActionListener{
         add(addButton);
 
         subtractButton = new JButton("Subtract");
+        subtractButton.addActionListener(this);
         subtractButton.setBounds(10,40,80,20);
         add(subtractButton);
 
-        firstNumberField = new JTextField("Enter first number");
-        firstNumberField.setBounds(100, 10, 70, 20);
+        firstNumberField = new JTextField("First Num:");
+        firstNumberField.setBounds(100, 10, 90, 20);
         firstNumberField.setForeground(new Color(169, 169, 169));
         firstNumberField.addFocusListener(f);
         add(firstNumberField);
 
-        secondNumberField = new JTextField("Enter second number");
-        secondNumberField.setBounds(100, 40, 70, 20);
+        secondNumberField = new JTextField("Second Num:");
+        secondNumberField.setBounds(100, 40, 90, 20);
         secondNumberField.setForeground(new Color(169, 169, 169));
-        secondNumberField.addFocusListener(f);
+        secondNumberField.addFocusListener(f1);
         add(secondNumberField);
 
         multiplyButton = new JButton("Multiply");
-        multiplyButton.setBounds(180,10,80,20);
+        multiplyButton.addActionListener(this);
+        multiplyButton.setBounds(200,10,80,20);
         add(multiplyButton);
 
         divideButton = new JButton("Divide");
-        divideButton.setBounds(180,40,80,20);
+        divideButton.addActionListener(this);
+        divideButton.setBounds(200,40,80,20);
         add(divideButton);
-
-        resultLabel = new JLabel("Result:");
-        resultLabel.setBounds(110,70,80,20);
-        add(resultLabel);
     }
 
     FocusListener f = new FocusListener() {
 
         public void focusGained(FocusEvent e) {
-            if (firstNumberField.getText().equals("Enter first number")) {
+            if (firstNumberField.getText().equals("First Num:")) {
                 firstNumberField.setText("");
                 firstNumberField.setForeground(new Color(153, 153, 153));
             }
+        }
 
-            if (secondNumberField.getText().equals("Enter second number")) {
+        public void focusLost(FocusEvent e) {
+            if (firstNumberField.getText().equals("")) {
+                firstNumberField.setText("First Num:");
+                firstNumberField.setForeground(new Color(169, 169, 169));
+            }
+        }
+    };
+
+    FocusListener f1 = new FocusListener() {
+
+        public void focusGained(FocusEvent e) {
+            if (secondNumberField.getText().equals("Second Num:")) {
                 secondNumberField.setText("");
                 secondNumberField.setForeground(new Color(153, 153, 153));
             }
         }
 
         public void focusLost(FocusEvent e) {
-            if (firstNumberField.getText().equals("")) {
-                firstNumberField.setText("Enter first number");
-                firstNumberField.setForeground(new Color(169, 169, 169));
-            }
-
             if (secondNumberField.getText().equals("")) {
-                secondNumberField.setText("Enter second number");
+                secondNumberField.setText("Second Num:");
                 secondNumberField.setForeground(new Color(169, 169, 169));
             }
         }
     };
 
-        public static void main(String[] args) {
-            Main main = new Main();
-            main.setVisible(true);
-        }
-
         @Override
         public void actionPerformed(ActionEvent e) {
-            int a = 0;
-            int b = 0;
-            int result = 0;
+            double a = 0.0;
+            double b = 0.0;
+            try {
+                a = Double.parseDouble(firstNumberField.getText());
+                b = Double.parseDouble(secondNumberField.getText());
+            } catch (NumberFormatException exception) {
+                JOptionPane.showMessageDialog(null, "Mismatch Input please enter \n " +
+                        "Integer or Double number.","Wrong Input!!",JOptionPane.WARNING_MESSAGE);
+                return;
+            }
+
+            double result = 0;
             if (e.getSource() == addButton) {
-                a = Integer.parseInt(firstNumberField.getText());
-                b = Integer.parseInt(secondNumberField.getText());
                 result = a + b;
                 JOptionPane.showMessageDialog(null, "Add Result is: " + result);
+            } else if (e.getSource() == multiplyButton) {
+                result = a * b;
+                JOptionPane.showMessageDialog(null, "Multiply Result is: " + result);
+            } else if (e.getSource() == subtractButton) {
+                result = a - b;
+                JOptionPane.showMessageDialog(null, "Subtract Result is: " + result);
+            } else if (e.getSource() == divideButton) {
+                if (a == 0 || b == 0) {
+                    JOptionPane.showMessageDialog(null, "You cannot divide by 0","Wrong Input!!",JOptionPane.WARNING_MESSAGE);
+                } else {
+                    result = a / b;
+                    JOptionPane.showMessageDialog(null, "Divide Result is: " + result);
+                }
 
             }
 
         }
+
+    public static void main(String[] args) {
+        Main main = new Main();
+        main.setVisible(true);
     }
+}
