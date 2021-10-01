@@ -111,9 +111,13 @@ public class MainPage extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == addBalanceButton) {
-            String newBalance = JOptionPane.showInputDialog("Enter new balance.");
-            currentBalance = Double.parseDouble(newBalance);
-            currentBalanceLabel.setText("Balance: $" + currentBalance);
+            try {
+                String newBalance = JOptionPane.showInputDialog("Enter new balance.");
+                currentBalance = Double.parseDouble(newBalance);
+                currentBalanceLabel.setText("Balance: $" + currentBalance);
+            } catch (NumberFormatException exception) {
+                JOptionPane.showMessageDialog(null,"Wrong input format \nPlease enter numbers.", "Wrong format." , JOptionPane.WARNING_MESSAGE);
+            }
 
         } else if (e.getSource() == value10Button) {
             if (!isCurrentBalance()) {
@@ -142,7 +146,11 @@ public class MainPage extends JFrame implements ActionListener {
         } else if (e.getSource() == customAmountButton){
             String amount = JOptionPane.showInputDialog("Custom amount to withdraw");
             if (!isCurrentBalance()) {
-                processTransaction(Double.parseDouble(amount));
+                try {
+                    processTransaction(Double.parseDouble(amount));
+                } catch (NumberFormatException exception) {
+                    JOptionPane.showMessageDialog(null,"Wrong input format \nPlease enter numbers.", "Wrong format." , JOptionPane.WARNING_MESSAGE);
+                }
             } else {
                 outOfMoney();
             }
