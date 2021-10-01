@@ -68,6 +68,7 @@ public int wrongPinCounter;
                 JOptionPane.showMessageDialog(null,"Welcome to AA ATM", "Welcome", JOptionPane.INFORMATION_MESSAGE);
                 nextPage.setVisible(true);
                 setVisible(false);
+                dispose();
             }
 
         }
