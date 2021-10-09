@@ -64,7 +64,7 @@ public class Main {
             }
         }
 
-        // encryptedText gets value of tempResult, so tempResult can be reset next iteration.
+        // encryptedText gets value of tempResult, so tempResult can be reset next iteration
         return encryptedText;
     }
 }
