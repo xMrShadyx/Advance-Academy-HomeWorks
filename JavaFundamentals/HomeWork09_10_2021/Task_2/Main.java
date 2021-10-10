@@ -40,7 +40,6 @@ public class Main {
         // Getting length of encryptedText divided by 2, so to count of all even numbers.
         // so we know how many times to iterate over nested (For loop) to concatenate encryptedText back to old self.
         int counter = encryptedText.length() / 2;
-//        if (encryptedText.length() % 3 == 0);
 
         for (int j = 0; j < n; j++) {
             // First part of encrypted text length / 2, so we can separate it to two parts, and concatenate it back to itself.
@@ -54,17 +53,17 @@ public class Main {
                 tempResult += secondPart.charAt(i);
                 tempResult += firstPart.charAt(i);
             }
-            // Това съм го направил по тоя начин, защото не мога да итерирам през стринг с нечетен брой символи и не мога да достъпя
+            // Това съм го направил по тоя начин, защото не мога да итерирам през стринг с нечетен брой символи (length % 2 != 0) и не мога да достъпя
             // последния елемент от стринга.
             if (encryptedText.length() % 3 == 0) {
                 encryptedText = tempResult + encryptedText.charAt(encryptedText.length() - 1);
             }
             else {
+                // encryptedText gets value of tempResult, so tempResult can be reset next iteration
                 encryptedText = tempResult;
             }
         }
 
-        // encryptedText gets value of tempResult, so tempResult can be reset next iteration
         return encryptedText;
     }
 }
