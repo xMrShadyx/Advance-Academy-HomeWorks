@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Advance-Academy-HomeWorks:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="e747119c-de11-41c4-b9bf-cfbac939383f" name="Changes" comment="">
+    <list default="true" id="c3b195da-28ec-4a18-8116-4da0d370fed9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Advance-Academy-HomeWorks/adv/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Advance-Academy-HomeWorks/adv/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +34,7 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="ProjectId" id="1ygW4HDI0Kyc660dovzQLufRPCT" />
+  <component name="ProjectId" id="1yrwCKKdduX4LmIh4Dp7zAc1y6r" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
@@ -37,18 +44,27 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../OtherProjects" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Application.Main (4)">
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="adv.JavaFundamentals.HomeWork29_09_2021.Task_2" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main (3)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="adv.JavaFundamentals.HomeWork27_09_2021.Main" />
+      <option name="MAIN_CLASS_NAME" value="adv.JavaFundamentals.HomeWork29_09_2021.Task_2.Main" />
       <module name="Advance-Academy-HomeWorks" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="adv.JavaFundamentals.HomeWork27_09_2021.*" />
+          <option name="PATTERN" value="adv.JavaFundamentals.HomeWork29_09_2021.Task_2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -57,11 +73,11 @@
       </method>
     </configuration>
     <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="adv.JavaFundamentals.HomeWork27_09_2021.Task_MoreExercise.Main" />
+      <option name="MAIN_CLASS_NAME" value="adv.JavaFundamentals.HomeWork09_10_2021.Task_1.Main" />
       <module name="Advance-Academy-HomeWorks" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="adv.JavaFundamentals.HomeWork27_09_2021.Task_MoreExercise.*" />
+          <option name="PATTERN" value="adv.JavaFundamentals.HomeWork09_10_2021.Task_1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -70,24 +86,11 @@
       </method>
     </configuration>
     <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="adv.JavaFundamentals.HomeWork27_09_2021.Task_1.Main" />
+      <option name="MAIN_CLASS_NAME" value="adv.JavaFundamentals.HomeWork09_10_2021.Task_2.Main" />
       <module name="Advance-Academy-HomeWorks" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="adv.JavaFundamentals.HomeWork27_09_2021.Task_1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="adv.JavaFundamentals.HomeWork29_09_2021.Task_1.Main" />
-      <module name="Advance-Academy-HomeWorks" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="adv.JavaFundamentals.HomeWork29_09_2021.Task_1.*" />
+          <option name="PATTERN" value="adv.JavaFundamentals.HomeWork09_10_2021.Task_2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -96,11 +99,63 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="adv.JavaFundamentals.HomeWork24_09_2021.Task_5.Main" />
+      <option name="MAIN_CLASS_NAME" value="adv.JavaFundamentals.September.HomeWork29_09_2021.Task_2.Main" />
       <module name="Advance-Academy-HomeWorks" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="adv.JavaFundamentals.HomeWork24_09_2021.Task_5.*" />
+          <option name="PATTERN" value="adv.JavaFundamentals.September.HomeWork29_09_2021.Task_2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="adv.JavaFundamentals.October.HomeWork09_10_2021.Task_1.Main" />
+      <module name="Advance-Academy-HomeWorks" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="adv.JavaFundamentals.October.HomeWork09_10_2021.Task_1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="adv.JavaFundamentals.October.HomeWork09_10_2021.Task_2.Main" />
+      <module name="Advance-Academy-HomeWorks" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="adv.JavaFundamentals.October.HomeWork09_10_2021.Task_2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="adv.JavaFundamentals.October.HomeWork09_10_2021.Task_3.Main" />
+      <module name="Advance-Academy-HomeWorks" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="adv.JavaFundamentals.October.HomeWork09_10_2021.Task_3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="adv.JavaFundamentals.TestDemo" />
+      <module name="Advance-Academy-HomeWorks" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="adv.JavaFundamentals.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -110,22 +165,22 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (4)" />
         <item itemvalue="Application.Main (3)" />
+        <item itemvalue="Application.TestDemo" />
+        <item itemvalue="Application.Main (4)" />
         <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e747119c-de11-41c4-b9bf-cfbac939383f" name="Changes" comment="" />
-      <created>1632673521708</created>
+      <changelist id="c3b195da-28ec-4a18-8116-4da0d370fed9" name="Changes" comment="" />
+      <created>1633022885325</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1632673521708</updated>
+      <updated>1633022885325</updated>
     </task>
     <servers />
   </component>
