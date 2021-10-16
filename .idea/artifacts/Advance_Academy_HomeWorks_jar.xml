@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Advance-Academy-HomeWorks:jar">
+    <output-path>$USER_HOME$/Desktop/CompiledApps/artifacts/Advance_Academy_HomeWorks_jar</output-path>
+    <root id="archive" name="Advance-Academy-HomeWorks.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$USER_HOME$/Desktop/CompiledApps/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="Advance-Academy-HomeWorks" />
+    </root>
+  </artifact>
+</component>
