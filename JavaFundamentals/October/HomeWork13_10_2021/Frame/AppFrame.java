@@ -5,13 +5,14 @@ import javax.swing.*;
 public class AppFrame extends JFrame {
     public InputOutputPanel topMenuPanel;
     public TablePanel tablePanel;
+    public PriceInfoPanel priceInfo;
 
 
     public AppFrame() {
         super("My Bills App");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(null);
-        setSize(700,600);
+        setSize(700, 600);
         setLocationRelativeTo(null);
         setResizable(false);
 
@@ -22,6 +23,10 @@ public class AppFrame extends JFrame {
         tablePanel = new TablePanel();
         tablePanel.tablePanel.setVisible(true);
         add(tablePanel.tablePanel);
+
+        priceInfo = new PriceInfoPanel();
+        priceInfo.priceInfo.setVisible(true);
+        add(priceInfo.priceInfo);
 
 
     }

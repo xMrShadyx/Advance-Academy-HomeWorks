@@ -10,11 +10,13 @@ public class TablePanel extends JFrame {
     public DefaultTableModel defaultTable;
     public JScrollPane pane;
 
+
     TablePanel() {
         tablePanel = new JPanel();
-        tablePanel.setBounds(70,150,530,330);
+        tablePanel.setBounds(70, 150, 530, 330);
         tablePanel.setLayout(null);
         tablePanel.setBorder(BorderFactory.createLineBorder(Color.black));
+
 
         String[] columns = {"Сметка", "Краен Срок", "Крайна Дата", "Вноска (Лева)"};
         defaultTable = new DefaultTableModel();
@@ -23,7 +25,11 @@ public class TablePanel extends JFrame {
         table = new JTable(defaultTable);
 
         pane = new JScrollPane(table);
-        pane.setBounds(0,0,530,330);
+        pane.setBounds(0, 0, 530, 330);
         tablePanel.add(pane);
+
+        // defaultTable.addRow();
     }
+
+
 }
