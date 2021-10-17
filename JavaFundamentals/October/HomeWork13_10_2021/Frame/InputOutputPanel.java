@@ -2,14 +2,19 @@ package adv.JavaFundamentals.October.HomeWork13_10_2021.Frame;
 
 
 import adv.JavaFundamentals.October.HomeWork13_10_2021.Models.TableModel;
+import com.toedter.calendar.JCalendar;
 import com.toedter.calendar.JDateChooser;
 import adv.JavaFundamentals.October.HomeWork13_10_2021.Frame.TablePanel;
+import com.toedter.calendar.JTextFieldDateEditor;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Comparator;
 import java.util.Date;
 
 public class InputOutputPanel extends JFrame implements ActionListener {
@@ -38,8 +43,6 @@ public class InputOutputPanel extends JFrame implements ActionListener {
         topPanelMenu.setLayout(null);
         topPanelMenu.setBorder(BorderFactory.createLineBorder(Color.black));
 
-        dateChooser = new JDateChooser();
-
         billsNameLabel = new JLabel("Сметка");
         billsNameLabel.setBounds(80, 10, 100, 20);
         topPanelMenu.add(billsNameLabel);
@@ -63,7 +66,7 @@ public class InputOutputPanel extends JFrame implements ActionListener {
         topPanelMenu.add(endingDateLabel);
 
         dateChooser = new JDateChooser();
-        dateChooser.setDateFormatString("dd-MM-yyyy");
+        dateChooser.getDateEditor();
         dateChooser.setBounds(270, 30, 100, 20);
         dateChooser.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
         topPanelMenu.add(dateChooser);
@@ -123,9 +126,10 @@ public class InputOutputPanel extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == importDataButton) {
-            // code
+            TablePanel.addToTable();
+            TablePanel.getMonthlyBill();
         } else if (e.getSource() == closesToEndButton) {
-            // code
+            // Fail
         }
     }
 

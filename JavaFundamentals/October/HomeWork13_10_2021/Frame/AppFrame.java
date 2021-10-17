@@ -18,14 +18,17 @@ public class AppFrame extends JFrame {
 
         topMenuPanel = new InputOutputPanel();
         topMenuPanel.topPanelMenu.setVisible(true);
+        topMenuPanel.topPanelMenu.validate();
         add(topMenuPanel.topPanelMenu);
 
         tablePanel = new TablePanel();
         tablePanel.tablePanel.setVisible(true);
+        tablePanel.tablePanel.validate();
         add(tablePanel.tablePanel);
 
         priceInfo = new PriceInfoPanel();
         priceInfo.priceInfo.setVisible(true);
+        priceInfo.priceInfo.validate();
         add(priceInfo.priceInfo);
 
 

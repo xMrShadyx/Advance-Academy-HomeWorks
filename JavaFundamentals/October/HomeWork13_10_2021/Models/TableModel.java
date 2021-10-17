@@ -1,5 +1,7 @@
 package adv.JavaFundamentals.October.HomeWork13_10_2021.Models;
 
+import com.toedter.calendar.JDateChooser;
+
 import java.util.Date;
 
 public class TableModel {
@@ -13,6 +15,10 @@ public class TableModel {
         this.endingDate = endingDate;
         this.dateChooser = dateChooser;
         this.moneyAmount = moneyAmount;
+    }
+
+    public String getMoneyAmount() {
+        return moneyAmount;
     }
 
     @Override
