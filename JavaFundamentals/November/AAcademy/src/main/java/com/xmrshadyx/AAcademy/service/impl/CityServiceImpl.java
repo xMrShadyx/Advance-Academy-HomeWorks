@@ -1,6 +1,7 @@
 package com.xmrshadyx.AAcademy.service.impl;
 
 import com.xmrshadyx.AAcademy.entity.City;
+import com.xmrshadyx.AAcademy.repository.CityRepository;
 import com.xmrshadyx.AAcademy.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,25 +11,25 @@ import java.util.List;
 @Service
 public class CityServiceImpl implements CityService {
 
-    private final CityService cityService;
+    private final CityRepository cityRepository;
 
     @Autowired
-    public CityServiceImpl(CityService cityService) {
-        this.cityService = cityService;
+    public CityServiceImpl(CityRepository cityRepository) {
+        this.cityRepository = cityRepository;
     }
 
     @Override
     public City save(City city) {
-        return null;
+        return cityRepository.save(city);
     }
 
     @Override
     public List<City> findAll() {
-        return null;
+        return cityRepository.findAll();
     }
 
     @Override
     public City findById(Long id) {
-        return null;
+        return cityRepository.findById(id).orElseThrow(IllegalArgumentException::new);
     }
 }

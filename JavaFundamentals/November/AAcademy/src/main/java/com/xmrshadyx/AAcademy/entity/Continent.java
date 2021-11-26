@@ -1,11 +1,17 @@
 package com.xmrshadyx.AAcademy.entity;
 
+import lombok.*;
 import org.hibernate.annotations.Fetch;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Set;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Builder
+@Setter
 @Entity
 @Table(name = "continents")
 public class Continent {
@@ -16,9 +22,6 @@ public class Continent {
 
     @NotNull
     @Column(nullable = false, unique = true)
-    private String continent_name;
-
-    @OneToMany(fetch = FetchType.EAGER)
-    private Set<Country> country;
+    private String name;
 
 }
