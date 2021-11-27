@@ -10,6 +10,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+
+import java.util.*;
+
+
 @Component
 public class ApplicationRunner implements CommandLineRunner {
 
@@ -76,6 +80,16 @@ public class ApplicationRunner implements CommandLineRunner {
         cityService.save(toronto);
         cityService.save(wholeContinent);
         cityService.save(lagos);
+
+        List<City> cities = cityService.findAll();
+
+        for (City city : cities) {
+            String printable = String.format
+                    ("In Continent: %s, have a country named: %s where in one of their cities named: %s have population of: %d amount of people.",
+                            city.getCountry().getContinent().getName(),city.getCountry().getCountry_name(),
+                            city.getCity_name(),city.getCity_population());
+            System.out.println(printable);
+        }
 
     }
 

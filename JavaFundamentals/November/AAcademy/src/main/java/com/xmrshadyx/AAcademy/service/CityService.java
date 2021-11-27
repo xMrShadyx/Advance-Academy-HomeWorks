@@ -11,4 +11,12 @@ public interface CityService {
     List<City> findAll();
 
     City findById(Long id);
+
+    // 2nd Part of HomeWork
+
+    City update(Long id, City city);
+
+    void delete(Long id);
+
+    void delete(String name);
 }

@@ -32,4 +32,27 @@ public class CityServiceImpl implements CityService {
     public City findById(Long id) {
         return cityRepository.findById(id).orElseThrow(IllegalArgumentException::new);
     }
+
+    @Override
+    public City update(Long id, City city) {
+        City foundCity = cityRepository.getById(id);
+        City updatedCity = City.builder()
+                .id(foundCity.getId())
+                .city_name(city.getCity_name())
+                .city_population((city.getCity_population()))
+                .build();
+
+        return cityRepository.save(updatedCity);
+    }
+
+    @Override
+    public void delete(Long id) {
+        cityRepository.deleteById(id);
+    }
+
+    @Override
+    public void delete(String name) {
+        City city = cityRepository.findByName(name).orElseThrow(IllegalArgumentException::new);
+        cityRepository.deleteByName(city.getCity_name());
+    }
 }

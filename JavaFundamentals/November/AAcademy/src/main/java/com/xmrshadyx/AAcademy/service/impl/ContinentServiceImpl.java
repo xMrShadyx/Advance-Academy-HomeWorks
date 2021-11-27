@@ -33,4 +33,27 @@ public class ContinentServiceImpl implements ContinentService {
         return continentRepository.findById(id).orElseThrow(IllegalArgumentException::new);
     }
 
+    @Override
+    public Continent update(Long id, Continent continent) {
+        Continent foundContinent = continentRepository.getById(id);
+        Continent updatedContinent = Continent.builder()
+                .id(foundContinent.getId())
+                .name(continent.getName())
+                .build();
+        return continentRepository.save(updatedContinent);
+    }
+
+    @Override
+    public void delete(Long id) {
+        continentRepository.deleteById(id);
+
+    }
+
+    @Override
+    public void delete(String name) {
+        Continent continent = continentRepository.findByName(name)
+                .orElseThrow(IllegalArgumentException::new);
+        continentRepository.deleteByName(continent.getName());
+
+    }
 }

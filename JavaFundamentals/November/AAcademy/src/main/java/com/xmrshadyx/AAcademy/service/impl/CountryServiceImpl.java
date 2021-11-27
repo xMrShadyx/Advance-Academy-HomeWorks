@@ -32,4 +32,30 @@ public class CountryServiceImpl implements CountryService {
     public Country findById(Long id) {
         return countryRepository.findById(id).orElseThrow(IllegalArgumentException::new);
     }
+
+    // 2nd Part of HomeWork
+
+    @Override
+    public Country update(Long id, Country country) {
+        Country foundCountry = this.findById(id);
+        Country updatedCountry = Country.builder()
+                .id(foundCountry.getId())
+                .country_name(country.getCountry_name())
+                .build();
+        return countryRepository.save(updatedCountry);
+    }
+
+    @Override
+    public void delete(Long id) {
+        countryRepository.deleteById(id);
+    }
+
+    @Override
+    public void delete(String name) {
+        Country country = countryRepository.findByName(name)
+                .orElseThrow(IllegalArgumentException::new);
+
+        countryRepository.deleteByName(country.getCountry_name());
+
+    }
 }

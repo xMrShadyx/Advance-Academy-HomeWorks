@@ -13,5 +13,12 @@ public interface ContinentService {
 
     Continent findById(Long id);
 
+    // 2nd Part of HomeWork
 
+    Continent update(Long id, Continent continent);
+
+    void delete(Long id);
+
+    void delete(String name);
 }
+
