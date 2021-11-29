@@ -33,6 +33,11 @@ public class CountryServiceImpl implements CountryService {
         return countryRepository.findById(id).orElseThrow(IllegalArgumentException::new);
     }
 
+    @Override
+    public Country findByName(String name) {
+        return countryRepository.findByName(name).orElseThrow(IllegalArgumentException::new);
+    }
+
     // 2nd Part of HomeWork
 
     @Override
@@ -40,7 +45,7 @@ public class CountryServiceImpl implements CountryService {
         Country foundCountry = this.findById(id);
         Country updatedCountry = Country.builder()
                 .id(foundCountry.getId())
-                .country_name(country.getCountry_name())
+                .name(country.getName())
                 .build();
         return countryRepository.save(updatedCountry);
     }
@@ -55,7 +60,7 @@ public class CountryServiceImpl implements CountryService {
         Country country = countryRepository.findByName(name)
                 .orElseThrow(IllegalArgumentException::new);
 
-        countryRepository.deleteByName(country.getCountry_name());
+        countryRepository.deleteByName(country.getName());
 
     }
 }

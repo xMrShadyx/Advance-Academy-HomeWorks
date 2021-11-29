@@ -13,6 +13,8 @@ public interface CountryService {
 
     Country findById(Long id);
 
+    Country findByName(String name);
+
     // 2nd Part of HomeWork
 
     Country update(Long id, Country country);

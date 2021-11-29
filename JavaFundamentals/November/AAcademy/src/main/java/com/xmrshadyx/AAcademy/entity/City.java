@@ -22,7 +22,7 @@ public class City {
 
     @NotNull
     @Column(nullable = false, unique = true)
-    private String city_name;
+    private String name;
 
     private Long city_population;
 

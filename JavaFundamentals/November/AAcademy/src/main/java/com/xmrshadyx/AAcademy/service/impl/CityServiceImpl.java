@@ -38,7 +38,7 @@ public class CityServiceImpl implements CityService {
         City foundCity = cityRepository.getById(id);
         City updatedCity = City.builder()
                 .id(foundCity.getId())
-                .city_name(city.getCity_name())
+                .name(city.getName())
                 .city_population((city.getCity_population()))
                 .build();
 
@@ -52,7 +52,7 @@ public class CityServiceImpl implements CityService {
 
     @Override
     public void delete(String name) {
-        City city = cityRepository.findByName(name).orElseThrow(IllegalArgumentException::new);
-        cityRepository.deleteByName(city.getCity_name());
+        City foundCity = cityRepository.findByName(name).orElseThrow(IllegalArgumentException::new);
+        cityRepository.deleteByName(foundCity.getName());
     }
 }

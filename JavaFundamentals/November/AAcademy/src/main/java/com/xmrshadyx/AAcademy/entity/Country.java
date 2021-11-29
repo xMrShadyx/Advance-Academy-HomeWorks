@@ -22,7 +22,7 @@ public class Country {
 
     @NotNull
     @Column(nullable = false, unique = true)
-    private String country_name;
+    private String name;
 
     @ManyToOne
 //    @JoinTable(name = "countries_continents", joinColumns = @JoinColumn(name = "countries_id", referencedColumnName = "id"),
