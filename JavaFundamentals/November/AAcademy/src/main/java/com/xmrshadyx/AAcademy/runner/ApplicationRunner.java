@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 import java.util.*;
 
 
-//@Component
+@Component
 public class ApplicationRunner implements CommandLineRunner {
 
     private final CityService cityService;
